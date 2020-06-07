@@ -11,9 +11,12 @@
 
 <script>
 // @ is an alias to /src
-import togbut from '@/components/togglebut.vue'
+import togbut from '@/components/bt3.vue'
+
 export default {
   name: 'abcdac',
+  mounted () {
+  },
   components: {
     togbut
   }
