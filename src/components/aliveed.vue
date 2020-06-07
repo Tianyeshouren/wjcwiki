@@ -16,13 +16,16 @@ export default {
     }
   },
   mounted () {
-    $script([
-      'lib/editormd/js/jquery.min.js',
-      'lib/editormd/js/zepto.min.js', 'lib/editormd/FileSaver.js'], () => {
-      $script(['lib/editormd/editormd.min.js', 'lib/editormd/myed.js'], () => {
-        this.initEditor()
+    $script(
+      'lib/editormd/js/jquery.min.js', () => {
+        $script(['lib/editormd/js/zepto.min.js', 'lib/editormd/FileSaver.js'], () => {
+          $script('lib/editormd/editormd.min.js', () => {
+            $script('lib/editormd/myed.js', () => {
+              this.initEditor()
+            })
+          })
+        })
       })
-    })
   },
   beforeDestroy () {
   },

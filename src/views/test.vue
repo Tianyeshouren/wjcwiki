@@ -1,20 +1,22 @@
 <template>
   <div class="page1" >
       sdadasd<br/>
+      <togbut/>
        <router-link to="/test1">1</router-link> |
        <router-link to="/test2">2</router-link>
         <router-view/>
-
     <h1>This is a page 1</h1>
-    <Pic/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import togbut from '@/components/togglebut.vue'
 export default {
-  name: 'abcdac'
+  name: 'abcdac',
+  components: {
+    togbut
+  }
 }
 
 </script>
